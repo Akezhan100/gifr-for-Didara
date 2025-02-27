@@ -1,154 +1,128 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подарок для Дидары</title>
+    <title>Мен жайлы</title>
     <style>
         body {
-            text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #ffe4e1;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
-
-        h1 {
-            color: #ff4d4d;
-        }
-
-        .gift-box {
-            position: relative;
-            width: 160px;
-            height: 160px;
-            margin: 50px auto;
-        }
-
-        .box {
-            width: 160px;
-            height: 100px;
-            background-color: #ff4d4d;
-            position: absolute;
-            bottom: 0;
-            border-radius: 10px;
-            border: 4px solid #cc0000;
-        }
-
-        .lid {
-            width: 170px;
-            height: 50px;
-            background-color: #cc0000;
-            position: absolute;
-            top: 0;
-            left: -5px;
-            border-radius: 10px;
-            transition: transform 0.5s ease-in-out;
-            z-index: 2;
-        }
-
-        .ribbon {
-            position: absolute;
-            width: 20px;
-            height: 100px;
-            background: #ffcc00;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            z-index: 3;
-        }
-
-        .bow {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            background: #ffcc00;
-            border-radius: 50%;
-            z-index: 4;
-        }
-
-        .bow::before, .bow::after {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background: #ffcc00;
-            border-radius: 50%;
-        }
-
-        .bow::before {
-            left: -30px;
-        }
-
-        .bow::after {
-            right: -30px;
-        }
-
-        .message {
-            position: absolute;
-            width: 180px;
-            top: -60px; /* Поднял текст выше */
-            left: -10px;
-            font-size: 16px;
+        header {
+            background-color: #4CAF50;
             color: white;
-            background: #ff1a1a;
-            padding: 10px;
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            z-index: 5; /* Теперь поверх банта */
+            text-align: center;
+            padding: 20px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .bio {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .personal-info, .education, .experience, .skills {
+            margin-bottom: 20px;
+        }
+        .personal-info ul, .education ul, .experience ul, .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .personal-info li, .education li, .experience li, .skills li {
+            margin-bottom: 10px;
         }
 
-        button {
-            background-color: #ff4d4d;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
+        /* Новый стиль для квадратного изображения */
+        .header-image {
+            width: 250px; /* Уменьшенный размер */
+            height: 250px; /* Сделаем изображение квадратным */
+            object-fit: cover;
+            border-radius: 50%; /* Круглый вид, если хотите */
+            margin: 0 auto; /* Центрирование изображения */
+        }
+
+        .header-container {
+            text-align: center;
+        }
+
+        /* Стиль для текста под изображением */
+        .floating-text {
+            font-size: 2rem;
+            color: #4CAF50;
+            font-weight: bold;
             margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #ff1a1a;
-        }
-
-        /* Анимация открытия подарка */
-        .open .lid {
-            transform: translateY(-50px) rotate(10deg);
-        }
-
-        .open .bow {
-            transform: translateX(-50%) translateY(-10px);
-        }
-
-        .open .message {
-            opacity: 1;
-            transform: translateY(-10px);
         }
     </style>
 </head>
 <body>
 
-    <h1>Дидарочка, для тебя подарок 🎁</h1>
+    <header>
+        <div class="header-container">
+            <!-- Квадратное изображение, уменьшенное до 250px -->
+            <img class="header-image" src="https://i.postimg.cc/gJGHLvyg/Whats-App-Image-2025-02-27-at-20-30-32.jpg" alt="Фото">
+            <!-- Текст под изображением -->
+            <div class="floating-text">Мен жайлы</div>
+        </div>
+    </header>
 
-    <div class="gift-box" id="gift">
-        <div class="lid"></div>
-        <div class="ribbon"></div>
-        <div class="bow"></div>
-        <div class="box"></div>
-        <div class="message">Дидара,прости меня, прошу тебя, ты мне очень дорога, люблю тебя ❤️</div>
-    </div>
+    <section>
+        <h2>Жеке Мәлеметтер</h2>
+        <div class="personal-info">
+            <ul>
+                <li><strong>Аты-жөні:</strong> Орынбек Дидара</li>
+                <li><strong>Туған күні:</strong> 2006 жыл 31 наурыз</li>
+                <li><strong>Туған жері:</strong> Астана, Қазақстан</li>
+                <li><strong>Электрондық пошта:</strong> orynbek.didara@mail.com</li>
+                <li><strong>Телефон:</strong> +7 434 355 5554</li>
+            </ul>
+        </div>
+    </section>
 
-    <button onclick="openGift()">Нажми</button>
+    <section>
+        <h2>Білім</h2>
+        <div class="education">
+            <ul>
+                <li><strong>оқу орным:</strong> Қазақ Ұлттық Университеті (ҚазҰУ), Өнер және дизайн факультеті, Өнеркәсіптік дизайн бакалавры</li>
+            </ul>
+        </div>
+    </section>
 
-    <script>
-        function openGift() {
-            document.getElementById("gift").classList.add("open");
-        }
-    </script>
+    <section>
+        <h2>Жұмыс Тәжірибесі</h2>
+        <div class="experience">
+            <ul>
+                <li><strong>2025-Қазіргі уақытқа дейін:</strong> Дизайнер окушысы</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Қабілеттер</h2>
+        <div class="skills">
+            <ul>
+                <li>Adobe Photoshop, Illustrator, AutoCAD</li>
+                <li>Өнеркәсіптік дизайн және өнімдер жасау</li>
+                <li>Креативті ойлау және командамен жұмыс істеу</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Қысқаша Өмірбаяны</h2>
+        <div class="bio">
+            <p>Мен Орынбек Дидара, Астана қаласында туып өстім. 2023 жылы Қазақ Ұлттық Университетіне өнеркәсіптік дизайн мамандығы бойынша оқуға түстім. Оқуға қабылданғаннан кейін, дизайнер ретінде жұмыс тәжірибесін жинақтай бастадым. Менің қызығушылықтарым — жаңа өнімдер мен дизайн шешімдерін жасау, креативті және функционалды дизайнды үйлестіру.</p>
+        </div>
+    </section>
 
 </body>
 </html>
